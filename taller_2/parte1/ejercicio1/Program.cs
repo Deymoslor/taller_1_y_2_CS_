@@ -6,7 +6,15 @@ namespace ejercicio1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int num1;
+
+            Console.Write("Porfavor ingrese un numero: ");
+            num1 = int.Parse(Console.ReadLine());
+
+            if (num1 % 2 == 0)
+                Console.WriteLine("Numero par!");
+            else
+                Console.WriteLine("Numero impar!");
         }
     }
 }
