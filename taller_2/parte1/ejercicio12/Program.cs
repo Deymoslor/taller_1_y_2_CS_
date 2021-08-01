@@ -6,7 +6,10 @@ namespace ejercicio12
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.Write("Digite su estatura en cm: ");
+            Double estatura = Double.Parse(Console.ReadLine());
+            if(estatura > 1.70)
+                Console.WriteLine("Usted es alto");
         }
     }
 }
