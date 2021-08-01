@@ -4,8 +4,6 @@ namespace ejercicio6
 {
     class Program
     {
-        static void Main(string[] args)
-        {
             static void Main(string[] args)
         {
             decimal valor,iva,total,descuento,val;
