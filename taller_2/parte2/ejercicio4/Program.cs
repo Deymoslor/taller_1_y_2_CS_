@@ -6,7 +6,18 @@ namespace ejercicio4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int a,b;
+            Console.WriteLine("Ingrese un numero: ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese un numero: ");
+            b = int.Parse(Console.ReadLine());
+            if (a > b)
+            {
+                Console.WriteLine("Numeros: ",a," , ",b);
+            }else
+            {
+                Console.WriteLine("Numeros: ",b," , ",a);
+            }
         }
     }
 }
