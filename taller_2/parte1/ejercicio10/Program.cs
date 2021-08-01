@@ -6,7 +6,15 @@ namespace ejercicio10
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int edad;
+
+            Console.Write("Ingrese su edad: ");
+            edad = int.Parse(Console.ReadLine());
+
+            if (edad >= 18)
+                Console.Write($"\nUsted tiene {edad}, por lo cual es mayor de edad.\n");
+            else
+                Console.Write($"\nUsted tiene {edad}, por lo cual es menor de edad.\n");
         }
     }
 }
