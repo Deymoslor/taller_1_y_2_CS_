@@ -6,7 +6,11 @@ namespace ejercicio3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            convertir dab = new convertir();
+            Console.WriteLine("Ingrese un numero del 0 al 99: ");
+            String pae = Console.ReadLine();
+            String letras = dab.Convertir(pae, true);
+            Console.WriteLine(letras);
         }
     }
 }
