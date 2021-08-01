@@ -1,12 +1,55 @@
 ﻿using System;
 
-namespace ejercicio2
+namespace ejercicio_02
 {
-    class Program
+    class ejercicio_02
     {
+
+        private int n;
+        private decimal salario;
+
+        private void num()
+        {
+            Console.WriteLine("Ingrese número de sueldos a ingresar: ");
+            n = int.Parse(Console.ReadLine());
+        }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ejercicio_02 n = new ejercicio_02();
+            n.condicional();
+
+
+            Console.ReadKey();
         }
+
+
+
+        private void condicional()
+        {
+            decimal mayor = 0;
+            ejercicio_02 n = new ejercicio_02();
+            n.num();
+            if (n.n <= 0)
+            {
+                Console.WriteLine("El número debe ser mayor a cero");
+                n.num();
+            }
+            else
+            {
+                for (int i =0; i < n.n;i++)
+                {
+                    Console.WriteLine("Inserte sueldo: ");
+                    salario = decimal.Parse(Console.ReadLine());
+
+                    if (salario > mayor)
+                        mayor = salario;
+
+                }
+                Console.WriteLine($"Mayor: ${mayor.ToString("N0")}");
+            }
+        }
+
+
     }
 }
+
