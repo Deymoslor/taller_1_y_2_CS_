@@ -10,7 +10,8 @@ namespace ejercicio14
             ArrayList articulos = new ArrayList();
             ArrayList valor = new ArrayList();
             ArrayList selecionado = new ArrayList();
-            int cant;
+            ArrayList valorSele = new ArrayList();
+            int cant,selec;
             decimal iva, total = 0;
 
             Console.Write("Ingrese cuantos articulos desea agregar: ");
@@ -40,15 +41,17 @@ namespace ejercicio14
             for (int i = 0; i < cant; i++)
             {
                 Console.Write($"\nIngrese el número del {i + 1} articulo a agregar: ");
-                selecionado.Add((int.Parse(Console.ReadLine()))-1);
+                selec = int.Parse(Console.ReadLine())-1;
+                selecionado.Add(articulos[selec]);
+                valorSele.Add(valor[selec]);
             }
 
             Console.Write("Los productos que usted adquirio: \n");
-            for (int i = 0; i < cant; i++)
+            for (int i = 0; i < selecionado.Count; i++)
             {
-                iva = (Convert.ToDecimal(valor[i])) * 0.19m;
-                Console.Write($"\n El {i+1} articulo es {articulos[i]} con un valor de ${((Convert.ToDecimal(valor[i])).ToString("N0"))} y con un iva de ${iva.ToString("N0")} para un total de ${((Convert.ToDecimal(valor[i]))+iva).ToString("N0")}.");
-                total = total + ((Convert.ToDecimal(valor[i])) + iva);
+                iva = (Convert.ToDecimal(valorSele[i])) * 0.19m;
+                Console.Write($"\n El {i+1} articulo es {selecionado[i]} con un valor de ${((Convert.ToDecimal(valorSele[i])).ToString("N0"))} y con un iva de ${iva.ToString("N0")} para un total de ${((Convert.ToDecimal(valor[i]))+iva).ToString("N0")}.");
+                total = total + ((Convert.ToDecimal(valorSele[i])) + iva);
             }
             Console.Write($"\nPara pagar un total de ${total.ToString("N0")}.\n");
         }
